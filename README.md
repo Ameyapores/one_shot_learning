@@ -1,3 +1,3 @@
-# one shot learning Siamese network
+# One shot learning Siamese network
 
 ### Dataset- Omniglot
