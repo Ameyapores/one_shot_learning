@@ -2,11 +2,24 @@
 ### Implementation of the following paper
 Siamese Neural Networks for One-shot Image Recognition (Gregory et.al)
 
-## Requirements
+### Requirements
 
 
 1.   Pytorch >= 0.4.0
 2.   Python 3.5+
+
+### Implementation details
+1.  First download the Omniglot dataset
+2.  Unzip the data in workspace as images_background and images_evaluation
+3.  Run my_dataset as
+```shell
+python3 my_dataset.py
+```
+This will extract the alphabets from the images_background and store it in training folder as individual training class. One needs to do this for the test dataset as well
+4.  Train and test the data
+```shell
+python3 train.py
+```
 
 ## Deep Siamese Networks for Image Verification 
 Siamese  nets  were  first  introduced  in  the  early  1990s  by
