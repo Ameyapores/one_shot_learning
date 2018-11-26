@@ -53,5 +53,11 @@ The basic intuition that once can gain from the paper is that it uses the L1 dis
 Omniglot of Lake et al. is a MNIST-like scribbles dataset with 1623 characters with 20 examples each. The large number of classes (characters) with relatively few data per class (20), makes this an ideal data set for testing few-shot classification.
 <img src="img/figure2.png"></img>
 
+### Results
+
+Precision ~ 86%
+loss value sampled after each 100 batch
+<img src="img/figure4.png"></img>
+
 
 
