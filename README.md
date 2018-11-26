@@ -57,7 +57,7 @@ Omniglot of Lake et al. is a MNIST-like scribbles dataset with 1623 characters w
 
 Precision ~ 86%
 loss value sampled after each 100 batch
-<img src="img/figure4.png"></img>
+<img src="img/graph.png"></img>
 
 
 
