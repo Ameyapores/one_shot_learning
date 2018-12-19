@@ -20,9 +20,9 @@ cd one_shot_learning
 ```shell
 python3 make_dataset.py
 ```
-This will extract the alphabets from the *images_background* and store it in *training* folder as individual training class. Similarly, it will extract the alphabets from the *images_evaluation* and store it in *evaluataion* folder. 
+This will extract the alphabets from the *images_background* and store it in *training* folder as individual training class. Similarly, it will extract the alphabets from the *images_evaluation* and store it in *evaluation* folder. 
 
-5. Create a empty folder named *model* in the workspace in order to store the weights of the network.
+5. Create an empty folder named *model* in the workspace in order to store the weights of the network.
 6. Train and test the data
 ```shell
 python3 train.py
