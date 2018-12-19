@@ -9,7 +9,7 @@ Siamese Neural Networks for One-shot Image Recognition (Gregory et.al)
 2.   Python 3.5+
 
 ### Implementation details
-1.  First download the Omniglot dataset
+1.  First download the [Omniglot dataset](https://github.com/brendenlake/omniglot/tree/master/python)
 2.  Unzip the data in workspace as images_background and images_evaluation
 3.  Run my_dataset as
 ```shell
