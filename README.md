@@ -10,7 +10,12 @@ Siamese Neural Networks for One-shot Image Recognition (Gregory et.al)
 
 ### Implementation details
 1.  First download the [Omniglot dataset](https://github.com/brendenlake/omniglot/tree/master/python)
-2.  Unzip the data in workspace as images_background and images_evaluation
+2.  Clone the repository and cd in it.
+```shell
+git clone https://github.com/Ameyapores/one_shot_learning
+cd one_shot_learning
+```
+3.  Unzip/extract the data in the workspace(above repository) as images_background and images_evaluation
 3.  Run my_dataset as
 ```shell
 python3 make_dataset.py
