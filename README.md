@@ -47,7 +47,6 @@ The models aims to learn the embeddings of 2 separate images fed into the Nueral
 Once the distance embedding metric is calculated, the embedding is fed into a sigmoid unit which by the magic of back propogation, learns the correct set of hyperparameters to carry out the image verification.
 
 <img src="img/figure3.png"></img>
-<caption><center> <u> <font color='black'> **Figure 3**</font> </u></center></caption>
 
 
 The model of Siamese network can be described as CNN architecture with 2 arms, a right arm and a left arm. The CNN architecture of a single arm has 9 layers, including Max Pooling and Convolutional layers of different filter sizes, as described in the paper. These 9 layers work as feature selectors for the CNN architecture. Convolutional layers are initialized with weights having **0 mean 0.01 standard deviation**, also the bias hyperparameter of the these layers is initialized with a **mean value of 0.5 and a standard deviation of 0.01**.
