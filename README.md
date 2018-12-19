@@ -16,7 +16,7 @@ git clone https://github.com/Ameyapores/one_shot_learning
 cd one_shot_learning
 ```
 3.  Unzip/extract the data in the workspace(above repository) as images_background and images_evaluation
-4.  Run my_dataset as
+4.  Run make_dataset as
 ```shell
 python3 make_dataset.py
 ```
