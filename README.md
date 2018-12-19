@@ -51,7 +51,7 @@ Once the distance embedding metric is calculated, the embedding is fed into a si
 
 The model of Siamese network can be described as CNN architecture with 2 arms, a right arm and a left arm. The CNN architecture of a single arm has 9 layers, including Max Pooling and Convolutional layers of different filter sizes, as described in the paper. These 9 layers work as feature selectors for the CNN architecture. Convolutional layers are initialized with weights having **0 mean 0.01 standard deviation**, also the bias hyperparameter of the these layers is initialized with a **mean value of 0.5 and a standard deviation of 0.01**.
 
-The basic intuition that once can gain from the paper is that it uses the L1 distance between the pixels of 2 different images as a metric of similarity.
+The basic intuition that one can gain from the paper is that it uses the L1 distance between the pixels of 2 different images as a metric of similarity.
  - If 2 images are similar the L1 distance between them will be lower as compared to the L1 distance computed for 2 somewhat different images.
  - The L1 distance computed is then used to train the sigmoid unit to find the write set of hyperparameters.
 
