@@ -55,10 +55,8 @@ loss_fn = torch.nn.BCEWithLogitsLoss(size_average=True)
 
 learning_rate = 0.00006
 
-
 net = Siamese()
 
-train_loss = []
 net.train()
 optimizer = torch.optim.Adam(net.parameters(),lr = learning_rate )
 optimizer.zero_grad()
@@ -71,6 +69,8 @@ test_every = 100
 train_loss = []
 loss_val = 0
 max_iter = 90000
+losses=[]
+batch_ids=[]
 
 for batch_id, (img1, img2, label) in enumerate(dataLoader, 1):
     if batch_id > max_iter:
@@ -83,14 +83,16 @@ for batch_id, (img1, img2, label) in enumerate(dataLoader, 1):
     optimizer.zero_grad()
     output = net.forward(img1, img2)
     loss = loss_fn(output, label)
-    loss_val += loss.data[0]
+    loss_val += loss.item()
     loss.backward()
     optimizer.step()
     if batch_id % show_every == 0 :
         print('[%d]\tloss:\t%.5f\tTook\t%.2f s'%(batch_id, loss_val/show_every, (time.time() - batch_start)*show_every))
+        batch_ids.append(float(batch_id))
+        losses.append(loss_val/show_every)
         loss_val = 0
     if batch_id % save_every == 0:
-        torch.save(net.state_dict(), './model/model-batch-%d.pth'%(batch_id+1,))
+        torch.save(net.state_dict(), 'model/model-batch-%d.pth'%(batch_id+1,))
     if batch_id % test_every == 0:
         right, error = 0, 0
         for _, (test1, test2) in enumerate(testLoader, 1):
